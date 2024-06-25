@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdivinharNumeros")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d6d1379de782db6c175f07068d4a7d81100913a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd7e70685e5aa9a3ac26f893e961c6ef89c1f1a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdivinharNumeros")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdivinharNumeros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

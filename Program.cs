@@ -22,6 +22,11 @@ while(true)
         string palavra = palavras[index];
         char[] arrayDeLetras = palavra.ToCharArray();
         int letrasRestantes = palavra.Length;
+        char[] PalavraAoSeDesvendar = new char[palavra.Length];
+        for(int a = 0; a < palavra.Length; a++)
+        {
+            PalavraAoSeDesvendar[a] = '_';
+        }
         
         int tentativas = 5;
         Console.WriteLine("A palavra tem: " + palavra.Length + " Letras");
@@ -42,12 +47,9 @@ while(true)
             {
                 Console.WriteLine("\n Tente adivinhar uma letra\n=> ");
                 string letra = Console.ReadLine();
-                char[] PalavraAoSeDesvendar = new char[palavra.Length];
+
                 int quantasLetrasAcertou = 0;
-                for(int a = 0; a < palavra.Length; a++)
-                {
-                    PalavraAoSeDesvendar[a] = '_';
-                }
+
 
                 if (arrayDeLetras.Contains(char.Parse(letra)))
                 {
