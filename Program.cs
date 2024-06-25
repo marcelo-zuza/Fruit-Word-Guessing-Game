@@ -6,8 +6,8 @@ Console.WriteLine("Hello, World!");
 
 while(true)
 {
-    Console.WriteLine("\nOlá, seja bem vindo ao jogo de adivinhação de palavras\n");
-    Console.Write("\nEscola uma opção:\n [1] Novo Jogo\n[2] Sair");
+    Console.WriteLine("\nOlá, seja bem vindo ao jogo de adivinhação de palavras de nomes de frutas\n");
+    Console.Write("\nEscola uma opção:\n [1] Novo Jogo\n [2] Sair\n=> ");
     string option = Console.ReadLine();
     if (option == "2")
     {
@@ -16,7 +16,10 @@ while(true)
     }else if(option == "1")
     {
         Console.WriteLine("\nVamos começar o jogo:");
-        string palavra = "banana";
+        List<string> palavras = new List<string>{"abacate", "uva", "mamao", "caju", "laranja", "melancia", "coco", "morango", "pessego"};
+        Random random = new Random();
+        int index = random.Next(palavras.Count);
+        string palavra = palavras[index];
         char[] arrayDeLetras = palavra.ToCharArray();
         int letrasRestantes = palavra.Length;
         
@@ -33,36 +36,40 @@ while(true)
             else if(letrasRestantes == 0)
             {
                 Console.WriteLine("\nPARABÉNS você venceu! A palavra é: " + palavra);
+                break;
             }
             else
             {
-                Console.WriteLine("\n Tente adivinhar uma letra\n");
+                Console.WriteLine("\n Tente adivinhar uma letra\n=> ");
                 string letra = Console.ReadLine();
                 char[] PalavraAoSeDesvendar = new char[palavra.Length];
+                int quantasLetrasAcertou = 0;
                 for(int a = 0; a < palavra.Length; a++)
                 {
                     PalavraAoSeDesvendar[a] = '_';
                 }
 
-                if(arrayDeLetras.Contains(char.Parse(letra)))
+                if (arrayDeLetras.Contains(char.Parse(letra)))
                 {
-                    arrayDeLetras.ToList().ForEach(letraDaPalavra =>
+                    for (int i = 0; i < palavra.Length; i++)
                     {
-                        if(letraDaPalavra == char.Parse(letra))
+                        if (arrayDeLetras[i] == char.Parse(letra))
                         {
-                            int index = palavra.IndexOf(letraDaPalavra);
-                            PalavraAoSeDesvendar[index] = letraDaPalavra;
-                        }
-                    });
-                    Console.WriteLine("Parabéns, você acertou uma letra");
-                    Console.WriteLine(PalavraAoSeDesvendar);
+                            PalavraAoSeDesvendar[i] = char.Parse(letra);
+                            letrasRestantes--;
+                            quantasLetrasAcertou++;
 
-                    letrasRestantes--;
+                        }
+                    }
+                    Console.WriteLine("Parabéns, você acertou, a letra " + letra + " aparece: " + quantasLetrasAcertou + " vezes");
+                    Console.WriteLine(PalavraAoSeDesvendar);
+                    quantasLetrasAcertou = 0;
+
                     Console.WriteLine("Letras restantes: " + letrasRestantes);
                 }
                 else
                 {
-                    Console.WriteLine("Você errou, tente novamente");
+                    Console.WriteLine("Você errou, não tem " + letra + " na palavra, tente novamente");
                     tentativas--;
                     Console.WriteLine("Tentativas restantes: " + tentativas);
                 }
