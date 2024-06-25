@@ -1,0 +1,14 @@
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/bin/Debug/net8.0/AdivinharNumeros
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/bin/Debug/net8.0/AdivinharNumeros.deps.json
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/bin/Debug/net8.0/AdivinharNumeros.runtimeconfig.json
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/bin/Debug/net8.0/AdivinharNumeros.dll
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/bin/Debug/net8.0/AdivinharNumeros.pdb
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/AdivinharNumeros.GeneratedMSBuildEditorConfig.editorconfig
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/AdivinharNumeros.AssemblyInfoInputs.cache
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/AdivinharNumeros.AssemblyInfo.cs
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/AdivinharNumeros.csproj.CoreCompileInputs.cache
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/AdivinharNumeros.dll
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/refint/AdivinharNumeros.dll
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/AdivinharNumeros.pdb
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/AdivinharNumeros.genruntimeconfig.cache
+/home/marcelo-zuza/Developer/Praticing/csharp/AdivinharNumeros/obj/Debug/net8.0/ref/AdivinharNumeros.dll
