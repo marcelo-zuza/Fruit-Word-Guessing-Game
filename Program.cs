@@ -1,22 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 
-Console.WriteLine("Hello, World!");
 
 while(true)
 {
-    Console.WriteLine("\nOlá, seja bem vindo ao jogo de adivinhação de palavras de nomes de frutas\n");
-    Console.Write("\nEscola uma opção:\n [1] Novo Jogo\n [2] Sair\n=> ");
+    Console.WriteLine("\nHello, welcome to the fruit name guessing game\n");
+    Console.Write("\nChoose an option:\n [1] New Game\n [2] Exit\n=> ");
     string option = Console.ReadLine();
     if (option == "2")
     {
-        Console.WriteLine("\nFim de jogo");
+        Console.WriteLine("\nGame Over");
         break;
     }else if(option == "1")
     {
-        Console.WriteLine("\nVamos começar o jogo:");
-        List<string> palavras = new List<string>{"abacate", "uva", "mamao", "caju", "laranja", "melancia", "coco", "morango", "pessego"};
+        Console.WriteLine("\nLet's start the game:");
+        List<string> palavras = new List<string>{"avocado", "grape", "papaya", "cashew", "orange", "watermelon", "coconut", "strawberry", "peach"};
         Random random = new Random();
         int index = random.Next(palavras.Count);
         string palavra = palavras[index];
@@ -29,23 +27,23 @@ while(true)
         }
         
         int tentativas = 5;
-        Console.WriteLine("A palavra tem: " + palavra.Length + " Letras");
+        Console.WriteLine("The word has: " + palavra.Length + " letters");
 
         while(true)
         {
             if(tentativas == 0)
             {
-                Console.WriteLine("\nSua tentativas acabaram, GAME OVER\n");
+                Console.WriteLine("\nYour attempts are over, GAME OVER\n");
                 break;
             }
             else if(letrasRestantes == 0)
             {
-                Console.WriteLine("\nPARABÉNS você venceu! A palavra é: " + palavra);
+                Console.WriteLine("\nCONGRATULATIONS you won! The word is: " + palavra);
                 break;
             }
             else
             {
-                Console.WriteLine("\n Tente adivinhar uma letra\n=> ");
+                Console.WriteLine("\n Try to guess a letter\n=> ");
                 string letra = Console.ReadLine();
 
                 int quantasLetrasAcertou = 0;
@@ -63,7 +61,7 @@ while(true)
 
                         }
                     }
-                    Console.WriteLine("Parabéns, você acertou, a letra " + letra + " aparece: " + quantasLetrasAcertou + " vezes");
+                    Console.WriteLine("Congratulations, you got it right! The letter " + letra + " appears " + quantasLetrasAcertou + " times");
                     Console.WriteLine(PalavraAoSeDesvendar);
                     quantasLetrasAcertou = 0;
 
@@ -71,15 +69,15 @@ while(true)
                 }
                 else
                 {
-                    Console.WriteLine("Você errou, não tem " + letra + " na palavra, tente novamente");
+                    Console.WriteLine("You missed, there's no" + letra + " in the word, try again");
                     tentativas--;
-                    Console.WriteLine("Tentativas restantes: " + tentativas);
+                    Console.WriteLine("Remaining attempts: " + tentativas);
                 }
             }
         }
     }
     else
     {
-        Console.WriteLine("Opção inválida, tente novamente");
+        Console.WriteLine("Invalid option, please try again");
     }
 }
